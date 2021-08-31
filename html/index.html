@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<!-- on utilise la version minified pour que le sitweb s'apload plus vite -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+<!-- font awesome library for icons -->
+    <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
+<!-- ici c notre file de css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <title>Future Digitale</title>
+  </head>
+  <body>
+<!-- Une classe container pour eviter que les elements collent au bordure du page -->
+    <div class="container ">
+
+
+<!-- 
+    on a une classe row qui a aussi  height : 100%  , des margins , border-radius ,background white
+    et une classe interface pour l'utiliser sur notre propre css 
+-->     <div class= "row  h-100   my-3  bg-white rounded  interface mb-md-5">
+        
+
+<!-- une premiere column qui a une classe padding bottom et padding top  -->
+            <div class="col-lg col-md pt-5 pb-4">
+
+
+<!-- 
+    une classe container pour contenir la forme et quelle ne colle pas au bordures du row 
+    avec une class position relative pour positioner l'icone user en top 
+-->             <div class="container position-relative">
+          
+
+<!-- le debut de notre form qui a comme parent le container et la premiere column-->
+                    <form action="index.html" id="Form">
+
+
+<!-- on met le titre sur une class form-group pour l'organisation -->
+                        <div class="form-group">
+                            <h3>Inscrivez vous</h3>
+                            <h6>Creez un compte gratuit sur futur digitale</h6>
+
+<!-- cette tag small cest le tag ou on affiche les erreurs de validation -->
+                            <small id="errorHandler" class="form-text pl-4"></small>
+
+                        </div>
+
+
+<!-- la partie de nom complet , on donne position relative pour placer le label flottant -->
+                        <div class="form-group position-relative">
+                                <input type="text" class="form-control form-control-lg FocusOut" aria-describedby="nameHelp" id="NameField"> 
+
+<!-- le label qui joue le role de placeholder alors pas besoin de dire a chaque fois -->
+                                <label class="placeHolder">Nom complet</label>
+                        </div>
+
+
+<!-- la partie du email meme chose pour le placeholder on donne position relative-->
+                        <div class="form-group position-relative">
+                            <input type="email" class="form-control form-control-lg FocusOut" aria-describedby="emailHelp" id="EmailField">
+                            <label class="placeHolder">Adresse email</label>
+                        </div>
+
+<!-- la partie password -->
+                        <div class="form-group position-relative">
+
+                                <input type="password" class="form-control form-control-lg  pr-5 FocusOut" id="PasswordField" aria-describedby="passwordHelp">
+                                <label class="placeHolder">Mot de passe</label>
+                                
+<!-- icon de yeu pour affichage de mot de passe 1 -->
+                                <div class="position-absolute eye-icon" id="Eye1">
+                                    <i class="fa fa-eye" aria-hidden="true" ></i>
+                                </div>
+
+<!-- la description en bas du mot de passe  -->
+                            <small id="passwordHelp" class="form-text text-muted pl-4">le mot de passe doit comporter entre 4 et 6 caracteres</small>
+
+<!-- fin partie password  -->
+                        </div>
+
+
+
+<!-- partie confirmation password -->        
+                        <div class="form-group position-relative">
+
+                                <input type="password" class="form-control form-control-lg pr-5 FocusOut" aria-describedby="validateHelp" id="ValidatePasswordField">
+                                <label class="placeHolder">Confirmer le mot de passe</label>
+
+
+<!-- icon de yeu pour affichage de mot de passe 2 -->
+                                <div class="position-absolute eye-icon" id="Eye2">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                        </div>
+
+
+<!--partie accepter les conditions / custom check box -->
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ConditionsField" aria-describedby="conditionsHelp">
+                                <label class="custom-control-label" for="ConditionsField">j'ai accepte les <a href="#">conditions generales</a></label>
+                            </div>
+                        </div>
+
+
+<!-- partie button , on utilise input type submit avec une classe text-uppercase -->
+                        <input type="submit" value="s'inscrire" class="btn btn-primary btn-lg btn-block btn1 text-uppercase ">
+
+<!-- la fin du forme-->
+                    </form>
+
+<!-- la partie de l'icon flottant en haut du forme en rose -->
+<!-- on donne la classe position-absolute pour positioner l'icon en haut du form on utilisant la classe icon -->
+                    <div class="icon position-absolute rounded p-2">
+
+<!-- on donne l'icon la classe width 100% pour l'optimisation -->
+                        <img src="../assets/icon.png" alt="icon" class="w-100">
+                    </div>
+
+<!-- form-container end -->
+                </div>
+
+<!-- first column end -->
+            </div>
+
+<!-- 
+    deuxieme column 
+    la partie du photo qui est a droite sur les grandes screens et en bas sur les petites
+    on donne la deuxieme column  une class padding 0 pour eviter les espaces entour du image 
+-->
+
+
+            <div class="col-lg col-md p-0">
+
+<!-- on donne la div container et l'image une width 100% et height 100% pour l'optimisation -->
+                <div class="w-100 h-100 ">
+                    <img src="../assets/pic1.PNG" alt="picture" class="w-100 h-100">
+                </div>
+
+<!-- second column end  -->
+            </div>
+
+<!-- row end -->
+        </div>
+        
+<!-- interface end -->
+    </div>
+
+<!-- our javascript file  -->
+    <script src="../javascript/script.js" ></script>
+  </body>
+</html>

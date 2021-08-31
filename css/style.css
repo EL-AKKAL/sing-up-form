@@ -1,0 +1,136 @@
+/* standard sheets */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:focus
+{
+    outline: none;
+}
+body
+{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #FAFCFD;
+    padding-top: 10vh;
+}
+a
+{
+    color: #FF5160;
+}
+h6
+{
+    color: #7F7F7F;
+}
+
+/* celui ces't l'etat normal du label floatant mintenant elle joue le role dun place holder */
+label.placeHolder
+{
+    position: absolute;
+    font-size: 20px; 
+    top: 10px;
+    left: 20px;
+    color: #999;
+    transition: 0.5s ease;
+}
+
+
+/*
+ celui c'est le cas ou on focus le textbox ou si le textbox nest pas vide, lable float en haut de son textbox 
+*/
+.form-control:focus + label.placeHolder , 
+.HasData label                          /* cette classe est utiliser sur javascript*/
+{
+    top: -15px;
+    left: 10px;
+    font-size: 14px; 
+    background-color: white;
+    color: #FF5160;
+    padding: 0 5px;
+}
+
+/* =======================form start=========================== */
+
+/* ici le box shadow quon voit entour du form */
+.interface
+{
+    box-shadow: 0px 3px 5px 0 #7f7f7f70;
+    border-radius: 50px;
+}
+
+/* ici on costumize la couleur en cas du focus sur les textbox */
+.form-control:focus {
+    border-color: #FF6E7A;
+    box-shadow: 0 0 0 0.2rem hsla(355, 100%, 72%, 0.459);
+}
+
+/* le style de l'icone qui affiche ou cache le mot de passe */
+.eye-icon
+{
+    color: #646464;
+    font-size: 1.5rem;
+    top: 17%;
+    right: 3%;
+}
+.eye-icon:hover
+{
+    cursor: pointer;
+}
+
+
+/* la costumisation du check box au cas du checked=true*/
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before
+{
+    background-color: #FF5160;
+}
+
+/* la costumisation du  button s'inscrire */
+.btn1
+{
+    background-color: #FF5160;
+    border-color: #FF5160;
+    transition: 0.5s ease;
+    transition-property: color , background-color , border-color;
+}
+
+
+/* petite animation pour le button s'inscrire */
+.btn1:hover
+{
+    background-color: transparent;
+    color: #FF5160;
+    border-color: #FF5160;
+}
+
+
+/* la costumisation du icon user qui float en haut du forme*/
+.icon
+{
+    width: 60px;
+    height: 60px;
+    background-color: #FF5160;
+    box-shadow: 0px 3px 5px 0 #7F7F7F;
+    top: -90px;
+    left: 15px;
+}
+
+/* 
+on utilise display non au cas que le errorhandel nest pas vide alors on veut pas quil s'affiche 
+on peux utiliser l'id pour eviter des erreurs en cas quon a un autre tag small qui joue le role 
+de first child 
+    
+*/
+small:first-child 
+{
+    display: none;
+}
+
+
+/* la classe help pour l'affichage des erreurs sur le tag small sur javascript */
+.help
+{
+    display: block !important;
+    color: red !important;
+}
